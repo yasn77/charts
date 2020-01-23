@@ -1,6 +1,9 @@
 dependencies:
 - name: postgresql
   repository: https://kubernetes-charts.storage.googleapis.com/
-  version: 8.1.2
-digest: sha256:c4bf54db60c2c5953ba7b79ce4814f8b8225d04e932868bcfab23b93c05b0f7f
-generated: "2019-12-31T13:58:27.104134475-08:00"
+  version: 8.1.5
+- name: kong-hpa
+  repository: ""
+  version: 1.2.0
+digest: sha256:9733043c3f6353fc91ed81d58cc0960e8b562597a9f138cc3e0959689b30ed5e
+generated: "2020-01-29T18:19:43.057147489Z"

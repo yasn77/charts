@@ -189,6 +189,10 @@ Kong can be configured via two methods:
 
 | Parameter                          | Description                                                                           | Default             |
 | ---------------------------------- | ------------------------------------------------------------------------------------- | ------------------- |
+| global.autoscaling.enabled         | Set this to `true` to enable autoscaling                                              | `false`             |
+| global.autoscaling.minReplicas     | Set minimum number of replicas                                                        | `2`                 |
+| global.autoscaling.maxReplicas     | Set maximum number of replicas                                                        | `5`                 |
+| global.autoscaling.metrics         | metrics used for autoscaling                                                          | See [values.yaml](values.yaml) |
 | image.repository                   | Kong image                                                                            | `kong`              |
 | image.tag                          | Kong image version                                                                    | `1.3`               |
 | image.pullPolicy                   | Image pull policy                                                                     | `IfNotPresent`      |
@@ -463,6 +467,21 @@ If your SMTP server requires authentication, you should the `username` and
 value is your SMTP password.
 
 ## Changelog
+
+### 1.2.0
+
+- Add (optional) ability to configure HorizontalPodAutoscaler (HPA)
+
+### 1.1.1
+
+#### Fixed
+
+* Add missing `smtp_admin_emails` and `smtp_mock = off` to SMTP enabled block in
+  `kong.env`.
+
+#### CI changes
+
+* Remove version bump requirement in preparation for new release model.
 
 ### 1.1.0
 
